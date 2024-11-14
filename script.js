@@ -8,6 +8,7 @@ const symbols = "!@#$%^&*()_+-={}:<>?";
 
 const allChars =upperCase + lowerCase + numbers + symbols;
 
+//Function for generate Random password
 function createPassword() {
   let password = "";
   password += upperCase[Math.floor(Math.random() * upperCase.length)];
@@ -21,5 +22,10 @@ function createPassword() {
   }
   passwordBox.value = password;
 }
-
 // createPassword();
+
+//Function for copying password
+function copyPassword(){
+  passwordBox.select();
+  document.execCommand("copy");
+}
