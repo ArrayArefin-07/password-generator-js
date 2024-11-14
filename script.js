@@ -6,7 +6,7 @@ const lowerCase = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "0123456789";
 const symbols = "!@#$%^&*()_+-={}:<>?";
 
-const allChars =upperCase + lowerCase + numbers + symbols;
+const allChars = upperCase + lowerCase + numbers + symbols;
 
 //Function for generate Random password
 function createPassword() {
@@ -16,16 +16,14 @@ function createPassword() {
   password += numbers[Math.floor(Math.random() * numbers.length)];
   password += symbols[Math.floor(Math.random() * symbols.length)];
 
-  while(length > password.length){
+  while (length > password.length) {
     password += allChars[Math.floor(Math.random() * allChars.length)];
-    console.log(password);
   }
   passwordBox.value = password;
 }
-// createPassword();
 
 //Function for copying password
-function copyPassword(){
+function copyPassword() {
   passwordBox.select();
   document.execCommand("copy");
 }
